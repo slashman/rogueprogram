@@ -17,7 +17,6 @@ var Game = {
 		Player.init(this);
 		World.init(this);
 		Input.init(this);
-		this.player.updateFOV();
 		Display.refresh();
 		Display.textBox.setText("Welcome to JSRL. Move around using the arrow keys, press comma to get items, [I] to access the inventory, then [U] or Enter to use items and [D] to drop them.");
 		Player.addItem(new Item(Items.BOOK_OF_MIRDAS));

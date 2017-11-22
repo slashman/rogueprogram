@@ -18,7 +18,6 @@ Level.prototype = {
 		for (var i = 0; i < this.beingsList.length; i++){
 			this.beingsList[i].act();
 		}
-		this.player.updateFOV();
 		this.game.display.refresh();
 		this.game.input.inputEnabled = true;
 	},
