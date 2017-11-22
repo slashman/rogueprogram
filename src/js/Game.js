@@ -18,7 +18,7 @@ var Game = {
 		World.init(this);
 		Input.init(this);
 		Display.refresh();
-		Display.textBox.setText("Welcome to JSRL. Move around using the arrow keys, press comma to get items, [I] to access the inventory, then [U] or Enter to use items and [D] to drop them.");
+		Display.textBox.setText("You enter the Main Menu. Move around using the arrow keys.");
 		Player.addItem(new Item(Items.BOOK_OF_MIRDAS));
 		Player.addItem(new Item(Items.IRON_SWORD));
 		Player.addItem(new Item(Items.BOOK_OF_MIRDAS));
