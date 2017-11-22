@@ -23,10 +23,10 @@ module.exports = {
 				this.level.exitY = this.player.y;
 				var previousLevelId = this.level.id;
 				this.level = new Level(this.game, levelId);
-				LevelGenerator.generateTestLevel(this.level, previousLevelId);
+				LevelGenerator.generateLevel(this.level, 'MainMenu', previousLevelId);
 			} else {
 				this.level = new Level(this.game, levelId);
-				LevelGenerator.generateTestLevel(this.level);
+				LevelGenerator.generateLevel(this.level, 'MainMenu');
 			}
 			this.levels[levelId] = this.level;
 		}

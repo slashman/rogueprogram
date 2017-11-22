@@ -1,6 +1,6 @@
 module.exports = {
 	x: 20,
-	y: 20,
+	y: 10,
 	tile: new ut.Tile('@', 255, 255, 255),
 	items: [],
 	init: function(game){
