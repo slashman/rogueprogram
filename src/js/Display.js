@@ -33,7 +33,7 @@ module.exports = {
 		if (this.centered) {
 			this.eng.update(this.game.player.x, this.game.player.y);
 		} else {
-			this.eng.update(40, 12);
+			this.eng.update(40, 10);
 		}
 		this.textBox.draw();
 		this.term.render();
