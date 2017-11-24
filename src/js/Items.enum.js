@@ -1,6 +1,11 @@
 var ItemType = require('./ItemType.enum')
 
 module.exports = {
+	PRIMARY_KEY: {
+		type: ItemType.KEY,
+		name: 'Primary Key',
+		tile: new ut.Tile('%', 128, 255, 255)
+	},
 	IRON_SWORD: {
 		type: ItemType.WEAPON,
 		name: 'Iron Sword',

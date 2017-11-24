@@ -34,5 +34,14 @@ module.exports = {
 				y: 11
 			}
 		}
+	],
+	items: [
+		{
+			id: 'PRIMARY_KEY',
+			on: {
+				x: 10,
+				y: 11
+			}
+		}
 	]
 }

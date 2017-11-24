@@ -3,11 +3,22 @@ const tiles = {
 		tile: new ut.Tile('*', 255, 0, 0),
 		solid: false
 	},
+	LOCKED_GATE: {
+		tile: new ut.Tile('/', 255, 0, 0),
+		solid: true,
+		locked: true
+	},
+	UNLOCKED_GATE: {
+		tile: new ut.Tile(' ', 255, 0, 0),
+		solid: false
+	},
 	' ': {
 		tile: new ut.Tile(' ', 0, 128, 0),
 		solid: false
 	}
 };
+
+tiles['/'] = tiles.LOCKED_GATE;
 
 const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789*-│┤╣║╗╝┐└┴┬├─┼╚╔╩╦╠═╬┘┌░▒▓"
 
