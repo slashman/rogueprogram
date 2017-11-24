@@ -27,5 +27,8 @@ module.exports = {
 		def.exits.forEach(e=>{
 			level.addExit(e.on.x, e.on.y, e.to, Tiles.PORTAL);
 		});
+		if (def.items) def.items.forEach(e=>{
+			level.addItem(e.on.x, e.on.y, new Item(Items[e.id]));
+		});
 	}
 }

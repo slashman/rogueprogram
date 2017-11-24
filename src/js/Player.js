@@ -63,7 +63,7 @@ module.exports = {
 		if (underItem){
 			this.game.display.message("Cannot drop the "+item.def.name+" here.");
 		} else {
-			this.game.world.level.addItem(item, this.x, this.y);
+			this.game.world.level.addItem(this.x, this.y, item);
 			this.removeItem(item);
 			this.game.display.message("You drop the "+item.def.name+".");
 		}

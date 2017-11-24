@@ -15,6 +15,12 @@ Level.prototype = {
 		this.id = id;
 		this.player = game.player;
 	},
+	getCellAt(x, y){
+		return this.map[x][y];
+	},
+	setCellAt(x, y, tile){
+		this.map[x][y] = tile;
+	},
 	beingsTurn: function(){
 		for (var i = 0; i < this.beingsList.length; i++){
 			this.beingsList[i].act();
@@ -58,7 +64,7 @@ Level.prototype = {
 	getExitTo: function(levelId) {
 		return this.exitPositions[levelId];
 	},
-	addItem: function(item, x, y){
+	addItem: function(x, y, item){
 		if (!this.items[x])
 			this.items[x] = [];
 		this.items[x][y] = item;
