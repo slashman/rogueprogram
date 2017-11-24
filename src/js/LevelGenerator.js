@@ -9,7 +9,8 @@ const LEVEL_DEFS = {
 	mainMenu: require('./levels/mainMenu'),
 	gamesMenu: require('./levels/gamesMenu'),
 	adminMenu: require('./levels/adminMenu'),
-	dbStructure: require('./levels/dbStructure')
+	dbStructure: require('./levels/dbStructure'),
+	adminPrompt: require('./levels/adminPrompt')
 } 
 
 module.exports = {
@@ -25,7 +26,7 @@ module.exports = {
 			}
 		}
 		def.exits.forEach(e=>{
-			level.addExit(e.on.x, e.on.y, e.to, Tiles.PORTAL);
+			level.addExit(e.on.x, e.on.y, e.to, Tiles.PORTAL, e.validator);
 		});
 		if (def.items) def.items.forEach(e=>{
 			level.addItem(e.on.x, e.on.y, new Item(Items[e.id]));

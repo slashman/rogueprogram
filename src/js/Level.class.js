@@ -52,14 +52,15 @@ Level.prototype = {
 			return false;
 		return true;
 	},
-	addExit: function(x,y, levelId, tile){
+	addExit: function(x,y, levelId, tile, validator){
 		if (!this.map[x])
 			this.map[x] = [];
 		this.map[x][y] = tile;
 		if (!this.exits[x])
 			this.exits[x] = [];
-		this.exits[x][y] = levelId;
-		this.exitPositions[levelId] = {x, y}
+		const exit = {levelId, x, y, validator};
+		this.exits[x][y] = exit
+		this.exitPositions[levelId] = exit
 	},
 	getExitTo: function(levelId) {
 		return this.exitPositions[levelId];

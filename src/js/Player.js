@@ -17,7 +17,10 @@ module.exports = {
 	},
 	land: function(){
 		if (this.game.world.level.exits[this.x] && this.game.world.level.exits[this.x][this.y]){
-			this.game.world.loadLevel(this.game.world.level.exits[this.x][this.y]);
+			const exit = this.game.world.level.exits[this.x][this.y];
+			if ((exit.validator && exit.validator(this.game)) || !exit.validator){
+				this.game.world.loadLevel(exit.levelId);
+			}
 		}
 		this.endTurn();
 	},

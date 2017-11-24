@@ -19,8 +19,9 @@ const tiles = {
 };
 
 tiles['/'] = tiles.LOCKED_GATE;
+tiles[' '] = tiles[' '];
 
-const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789*-│┤╣║╗╝┐└┴┬├─┼╚╔╩╦╠═╬┘┌░▒▓"
+const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789*-│┤╣║╗╝┐└┴┬├─┼╚╔╩╦╠═╬┘┌░▒▓[]"
 
 chars.split('').forEach(c=>{
 	tiles[c] = {

@@ -14,46 +14,35 @@ module.exports = {
 		"                   │DBStructure  │                                              ",
 		"                                 │                                              ",
 		"                   └─────────────┘                                              ",
-		"                   ┌─────────────┐                                              ",
-		"                   │ProcessMan                                                  ",
-		"                   │             │                                              ",
-		"                   └─────────────┘                                              ",
 		"                                                                                ",
-		"                                                                                ",
-		" ╔═══════════════════════════ ═╦═ ════════════════════════╗                     ",
-		" ║   MENU 2  GAMES             ║  MENU 1   Main Menu      ║                     ",
-		" ║                             ║                          ║                     ",
+		" ╔═════════════════════════════╦══════════════════════════╗                     ",
+		" ║  This operation requires elevation. Please enter root  ║                     ",
+		" ║                                                        ║                     ",
+		" ║                [    ]                                  ║                     ",
+		" ║                                                        ║                     ",
+		" ║       Ok                         Cancel                ║                     ",
 		" ╚═════════════════════════════╩══════════════════════════╝                     ",
 		"                                                                                "
 	],
 	exits: [
 		{
-			to: "gamesMenu",
-			on: {
-				x: 5,
-				y: 21
-			}
-		},
-		{
-			to: "mainMenu",
+			to: "adminMenu",
 			on: {
 				x: 35,
-				y: 21
+				y: 19
 			}
 		},
 		{
-			to: "dbStructure",
+			to: "processMan",
 			on: {
-				x: 30,
-				y: 10
+				x: 5,
+				y: 19
+			},
+			validator: function(game){
+				game.display.message("ACCESS DENIED");
+
+				return false;
 			}
-		},
-		{
-			to: "adminPrompt",
-			on: {
-				x: 30,
-				y: 14
-			}
-		},
+		}
 	]
 }
