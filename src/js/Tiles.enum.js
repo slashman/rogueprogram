@@ -3,8 +3,8 @@ const tiles = {
 		tile: new ut.Tile('*', 255, 0, 0),
 		solid: false
 	},
-	' ': {
-		tile: new ut.Tile(' ', 0, 128, 0),
+	' ': {
+		tile: new ut.Tile(' ', 0, 128, 0),
 		solid: false
 	}
 };

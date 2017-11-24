@@ -1,5 +1,5 @@
 module.exports = {
-	x: 20,
+	x: 15,
 	y: 10,
 	tile: new ut.Tile('@', 255, 255, 255),
 	items: [],

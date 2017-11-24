@@ -6,6 +6,10 @@ var Item = require('./Item.class');
 var Random = require('./Random');
 
 const LEVEL_DEFS = {
+	mainMenu: require('./levels/mainMenu'),
+	gamesMenu: require('./levels/gamesMenu'),
+	adminMenu: require('./levels/adminMenu'),
+	dbStructure: require('./levels/dbStructure')
 } 
 
 module.exports = {
