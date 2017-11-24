@@ -8,27 +8,26 @@ module.exports = {
 	init: function(game){
 		this.game = game;
 		this.player = game.player;
-		this.loadLevel('testLevel'+Random.n(0,1000));
+		this.loadLevel('mainMenu');
 	},
 	loadLevel: function(levelId){
+		let previousLevelId = false;
+		if (this.level){
+			previousLevelId = this.level.id;
+		}
 		if (this.levels[levelId]){
-			this.level.exitX = this.player.x;
-			this.level.exitY = this.player.y;
 			this.level = this.levels[levelId];
-			this.player.x = this.level.exitX;
-			this.player.y = this.level.exitY;
 		} else {
-			if (this.level){
-				this.level.exitX = this.player.x;
-				this.level.exitY = this.player.y;
-				var previousLevelId = this.level.id;
-				this.level = new Level(this.game, levelId);
-				LevelGenerator.generateLevel(this.level, 'MainMenu', previousLevelId);
-			} else {
-				this.level = new Level(this.game, levelId);
-				LevelGenerator.generateLevel(this.level, 'MainMenu');
-			}
+			this.level = new Level(this.game, levelId);
+			LevelGenerator.generateLevel(this.level, levelId);
 			this.levels[levelId] = this.level;
+		}
+		if (previousLevelId) {
+			const exit = this.level.getExitTo(previousLevelId);
+			if (exit){
+				this.player.x = exit.x;
+				this.player.y = exit.y;
+			}
 		}
 	}
 }

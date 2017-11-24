@@ -8,6 +8,7 @@ Level.prototype = {
 		this.beings = [];
 		this.beingsList = [];
 		this.exits = [];
+		this.exitPositions = [];
 		this.items = [];
 
 		this.game = game;
@@ -52,6 +53,10 @@ Level.prototype = {
 		if (!this.exits[x])
 			this.exits[x] = [];
 		this.exits[x][y] = levelId;
+		this.exitPositions[levelId] = {x, y}
+	},
+	getExitTo: function(levelId) {
+		return this.exitPositions[levelId];
 	},
 	addItem: function(item, x, y){
 		if (!this.items[x])
