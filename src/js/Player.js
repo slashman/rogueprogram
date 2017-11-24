@@ -7,7 +7,20 @@ module.exports = {
 		this.game = game;
 	},
 	tryMove: function(dir){
-		if (!this.game.world.level.canWalkTo(this.x+dir.x, this.y+dir.y)){
+		const level = this.game.world.level;
+		const being = level.getBeingAt(this.x+dir.x, this.y+dir.y);
+		if (being){
+			if (being.friendly){
+				if (being.hint){
+					this.game.display.message(`"${being.hint}"`);
+				}
+			} else {
+				//Attack!
+			}
+			this.game.input.inputEnabled = true;
+			return;
+		}
+		if (!level.canWalkTo(this.x+dir.x, this.y+dir.y)){
 			this.game.input.inputEnabled = true;
 			return;
 		}

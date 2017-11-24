@@ -19,7 +19,7 @@ module.exports = {
 			this.level = this.levels[levelId];
 		} else {
 			this.level = new Level(this.game, levelId);
-			LevelGenerator.generateLevel(this.level, levelId);
+			LevelGenerator.generateLevel(this.game, this.level, levelId);
 			this.levels[levelId] = this.level;
 		}
 		if (previousLevelId) {

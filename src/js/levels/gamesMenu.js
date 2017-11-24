@@ -55,5 +55,22 @@ module.exports = {
 				y: 14
 			}
 		},
+	],
+	npcs: [
+		{
+			hint: "I know @root used to enjoy playing these games before becoming an adult.",
+			on: {
+				x: 6,
+				y: 6
+			}
+		},
+		{
+			hint: "Hints to the root password can be found within the games.",
+			on: {
+				x: 16,
+				y: 6
+			}
+		}
+
 	]
 }

@@ -21,6 +21,9 @@ Level.prototype = {
 	setCellAt(x, y, tile){
 		this.map[x][y] = tile;
 	},
+	getBeingAt(x, y){
+		return this.beings[x] && this.beings[x][y];
+	},
 	beingsTurn: function(){
 		for (var i = 0; i < this.beingsList.length; i++){
 			this.beingsList[i].act();
@@ -28,7 +31,7 @@ Level.prototype = {
 		this.game.display.refresh();
 		this.game.input.inputEnabled = true;
 	},
-	addBeing: function(being, x, y){
+	addBeing: function(x, y, being){
 		this.beingsList.push(being);
 		if (!this.beings[x])
 			this.beings[x] = [];

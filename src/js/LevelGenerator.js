@@ -15,7 +15,7 @@ const LEVEL_DEFS = {
 } 
 
 module.exports = {
-	generateLevel: function(level, defId){
+	generateLevel: function(game, level, defId){
 		const def = LEVEL_DEFS[defId];
 		const map = def.baseMap;
 		for (var y = 0; y < map.length; y++){
@@ -31,6 +31,13 @@ module.exports = {
 		});
 		if (def.items) def.items.forEach(e=>{
 			level.addItem(e.on.x, e.on.y, new Item(Items[e.id]));
+		});
+		if (def.npcs) def.npcs.forEach(n=>{
+			const npc = new Being(game, level, Races.NPC);
+			npc.hint = n.hint;
+			npc.friendly = true;
+			npc.intent = 'RANDOM';
+			level.addBeing(n.on.x, n.on.y, npc);
 		});
 	}
 }
