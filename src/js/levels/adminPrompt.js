@@ -39,10 +39,52 @@ module.exports = {
 				y: 19
 			},
 			validator: function(game){
-				game.display.message("ACCESS DENIED");
-
-				return false;
+				const password = "abXY";
+				const enteredPassword = game.world.level.getPassword();
+				if (password !== enteredPassword){
+					game.display.message("ACCESS DENIED");
+					return false;
+				} else {
+					return true;
+				}
 			}
 		}
+	],
+	items: [
+		{
+			id: 'a_CHARACTER',
+			on: {
+				x: 20,
+				y: 18
+			}
+		},
+		{
+			id: 'b_CHARACTER',
+			on: {
+				x: 21,
+				y: 18
+			}
+		},
+		{
+			id: 'X_CHARACTER',
+			on: {
+				x: 22,
+				y: 18
+			}
+		},
+		{
+			id: 'Y_CHARACTER',
+			on: {
+				x: 23,
+				y: 18
+			}
+		},
+		{
+			id: 'c_CHARACTER',
+			on: {
+				x: 24,
+				y: 18
+			}
+		},
 	]
 }

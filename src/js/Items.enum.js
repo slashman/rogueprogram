@@ -1,6 +1,6 @@
 var ItemType = require('./ItemType.enum')
 
-module.exports = {
+const ITEM_TYPES = {
 	PRIMARY_KEY: {
 		type: ItemType.KEY,
 		name: 'Primary Key',
@@ -28,3 +28,15 @@ module.exports = {
 		tile: new ut.Tile('S', 0, 255, 0)	
 	}
 }
+
+const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+chars.split('').forEach(character=>{
+	ITEM_TYPES[character+'_CHARACTER'] = {
+		type: ItemType.CHARACTER,
+		name: character+' Character',
+		tile: new ut.Tile(character, 0, 0, 255),
+		charValue: character
+	}
+})
+
+module.exports = ITEM_TYPES;

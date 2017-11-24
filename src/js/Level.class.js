@@ -80,6 +80,16 @@ Level.prototype = {
 			this.items[x] = [];
 		this.items[x][y] = false;
 	},
+	getPassword: function(){
+		const passwordLocation = {x: 19, y:17};
+		let password = "";
+		for (let i = 0; i < 4; i++){
+			const item = this.getItem(passwordLocation.x+i, passwordLocation.y);
+			if (item && item.def.charValue)
+				password += item.def.charValue;
+		}
+		return password;
+	}
 }
 
 module.exports = Level;

@@ -15,6 +15,12 @@ module.exports = {
 			}
 		}
 	},
+	CHARACTER: {
+		name: 'Character',
+		useFunction: function(game){
+			game.display.message("Nothing happens");
+		}
+	},
 	WEAPON: {
 		name: 'Weapon',
 		useFunction: function(game, item){

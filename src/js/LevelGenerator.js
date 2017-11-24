@@ -10,7 +10,8 @@ const LEVEL_DEFS = {
 	gamesMenu: require('./levels/gamesMenu'),
 	adminMenu: require('./levels/adminMenu'),
 	dbStructure: require('./levels/dbStructure'),
-	adminPrompt: require('./levels/adminPrompt')
+	adminPrompt: require('./levels/adminPrompt'),
+	processMan: require('./levels/processMan'),
 } 
 
 module.exports = {
