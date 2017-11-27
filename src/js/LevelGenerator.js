@@ -27,6 +27,8 @@ module.exports = {
 				if (/[A-Z]/.test(chara) && Random.chance(20)){
 					const monster = new Being(game, level, Races[chara]);
 					monster.friendly = false;
+					monster.name = chara;
+					monster.hp = Random.n(3,10);
 					monster.intent = 'WAIT';
 					level.addBeing(x, y, monster);
 					level.map[x][y] = Tiles[' '];

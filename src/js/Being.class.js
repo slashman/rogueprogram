@@ -36,13 +36,21 @@ Being.prototype = {
 		}
 		var dx = Math.sign(nearestEnemy.x - this.x);
 		var dy = Math.sign(nearestEnemy.y - this.y);
-		if (!this.level.canWalkTo(this.x+dx,this.y+dy)){
-			return;
+		if (this.x+dx === this.game.player.x && this.y+dy === this.game.player.y){
+			this.attackPlayer();
+		} else if (this.level.canWalkTo(this.x+dx,this.y+dy)){
+			this.moveTo(dx, dy);
 		}
-		this.moveTo(dx, dy);
+		
+	},
+	attackPlayer: function() {
+		this.game.display.message(`The ${this.name} hits you.`);
+		this.game.player.damage(Random.n(1,3));
 	},
 	getNearestEnemy: function(){
 		if (Geo.distance(this, this.game.player) > 5)
+			return false;
+		if (this.game.player.dead)
 			return false;
 		return this.game.player;
 	},

@@ -7,7 +7,7 @@ module.exports = {
 	},
 	movedir: { x: 0, y: 0 },
 	onKeyDown: function(k){
-		if (!this.inputEnabled)
+		if (!this.inputEnabled || this.game.player.dead)
 			return;
 		if (this.mode === 'MOVEMENT'){
 			if (k === ut.KEY_COMMA){

@@ -36,6 +36,7 @@ module.exports = {
 			this.eng.update(40, 10);
 		}
 		this.textBox.draw();
+		this.term.putString("  HP: "+this.game.player.hp+"  ", 0, 24, 0, 0, 0, 255, 255, 255);
 		this.term.render();
 	},
 	showInventory: function(){
