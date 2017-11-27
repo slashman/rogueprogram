@@ -23,7 +23,16 @@ module.exports = {
 				if (!level.map[x]){
 					level.map[x] = [];
 				}
-				level.map[x][y] = Tiles[map[y].charAt(x)];
+				const chara = map[y].charAt(x);
+				if (/[A-Z]/.test(chara) && Random.chance(20)){
+					const monster = new Being(game, level, Races[chara]);
+					monster.friendly = false;
+					monster.intent = 'WAIT';
+					level.addBeing(x, y, monster);
+					level.map[x][y] = Tiles[' '];
+				} else {
+					level.map[x][y] = Tiles[chara];
+				}
 			}
 		}
 		def.exits.forEach(e=>{

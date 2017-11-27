@@ -1,4 +1,5 @@
 var Random = require('./Random');
+var Geo = require('./Geo');
 
 function Being(game, level, race){
 	this.game = game;
@@ -15,8 +16,8 @@ Being.prototype = {
 			case 'RANDOM':
 				this.actRandom();
 				break;
-			case 'CHASE':
-				this.actChase();
+			case 'WAIT':
+				this.actWait();
 				break;
 		}
 	},
@@ -28,7 +29,7 @@ Being.prototype = {
 		}
 		this.moveTo(dx, dy);
 	},
-	actChase: function(){
+	actWait: function(){
 		var nearestEnemy = this.getNearestEnemy();
 		if (!nearestEnemy){
 			return;
@@ -41,6 +42,8 @@ Being.prototype = {
 		this.moveTo(dx, dy);
 	},
 	getNearestEnemy: function(){
+		if (Geo.distance(this, this.game.player) > 5)
+			return false;
 		return this.game.player;
 	},
 	moveTo: function(dx,dy){
