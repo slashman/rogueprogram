@@ -18,6 +18,7 @@ module.exports = {
 	generateLevel: function(game, level, defId){
 		const def = LEVEL_DEFS[defId];
 		const map = def.baseMap;
+		let hintCounter = 0;
 		for (var y = 0; y < map.length; y++){
 			for (var x = 0; x < map[0].length; x++){
 				if (!level.map[x]){
@@ -32,6 +33,13 @@ module.exports = {
 					monster.intent = 'WAIT';
 					level.addBeing(x, y, monster);
 					level.map[x][y] = Tiles[' '];
+				} else if (chara === '%') {
+					const npc = new Being(game, level, Races.NPC);
+					npc.hint = def.hints[hintCounter++];
+					npc.friendly = true;
+					npc.intent = 'RANDOM';
+					level.addBeing(x, y, npc);
+					level.map[x][y] = Tiles[' '];
 				} else {
 					level.map[x][y] = Tiles[chara];
 				}
@@ -42,13 +50,6 @@ module.exports = {
 		});
 		if (def.items) def.items.forEach(e=>{
 			level.addItem(e.on.x, e.on.y, new Item(Items[e.id]));
-		});
-		if (def.npcs) def.npcs.forEach(n=>{
-			const npc = new Being(game, level, Races.NPC);
-			npc.hint = n.hint;
-			npc.friendly = true;
-			npc.intent = 'RANDOM';
-			level.addBeing(n.on.x, n.on.y, npc);
 		});
 	}
 }

@@ -12,7 +12,7 @@ module.exports = {
 		"                                                                                ",
 		"                   ┌─────────────┐                                              ",
 		"                   │Quotes       │                                              ",
-		"                                 │                                              ",
+		"              %                  │                                              ",
 		"                   └─────────────┘                                              ",
 		"                   ┌─────────────┐                                              ",
 		"                   │Word process                                                ",
@@ -56,14 +56,7 @@ module.exports = {
 			}
 		},
 	],
-	npcs: [
-		{
-			hint: "Access to the games menu was locked by @root, to prevent productivity loss.",
-			on: {
-				x: 6,
-				y: 6
-			}
-		}
-
+	hints: [
+		"Access to the games menu was locked by @root, to prevent productivity loss."
 	]
 }
