@@ -9,9 +9,9 @@ module.exports = {
 		"                                                                                ",
 		"                    GAMES MENU                                                  ",
 		"                                                                                ",
-		"                                                                                ",
+		"                    Battleship                                                  ",
 		"                   ┌─────────────┐                                              ",
-		"                   │Hangman      │               %                              ",
+		"       %           │Hangman      │               %                              ",
 		"                                 │                                              ",
 		"                   └─────────────┘                                              ",
 		"                   ┌─────────────┐                                              ",
@@ -35,10 +35,10 @@ module.exports = {
 			}
 		},
 		{
-			to: "adminMenu",
+			to: "battleship",
 			on: {
-				x: 35,
-				y: 21
+				x: 30,
+				y: 8
 			}
 		},
 		{
@@ -57,7 +57,8 @@ module.exports = {
 		},
 	],
 	hints: [
-		"I know @root used to enjoy playing these games before becoming an adult.",
-		"Hints to the root password can be found within the games."
+		"@root used to enjoy playing these games",
+ 		"Hints to the root password can be found within the games.",
+ 		"The first two characters of the root password are @root's favorite Dungeons and Dragons class"
 	]
 }

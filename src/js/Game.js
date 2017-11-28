@@ -18,13 +18,8 @@ var Game = {
 		World.init(this);
 		Input.init(this);
 		Display.refresh();
-		Display.textBox.setText("You enter the Main Menu. Move around using the arrow keys.");
-		Player.addItem(new Item(Items.BOOK_OF_MIRDAS));
-		Player.addItem(new Item(Items.IRON_SWORD));
-		Player.addItem(new Item(Items.BOOK_OF_MIRDAS));
-		Player.addItem(new Item(Items.IRON_SWORD));
-		Player.addItem(new Item(Items.SPELL_OF_LOLZORS));
-		Player.addItem(new Item(Items.BOOK_OF_AURORA));
+		Display.textBox.setText("You enter the Main Menu. Move around using the arrow keys. Follow the * to move between programs");
+		Player.addItem(new Item(Items.PRIMARY_KEY));
 	}
 }
 

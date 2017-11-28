@@ -7,13 +7,13 @@ module.exports = {
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
-		"                    PROCESS MANAGER                                             ",
+		"                    RENT MOVIE                                                  ",
 		"                                                                                ",
 		"                                                                                ",
+		"                        %                                                       ",
 		"                                                                                ",
-		"                         %                                                      ",
 		"                                                                                ",
-		"                                                                                ",
+		"                    %                                                           ",
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
@@ -26,7 +26,7 @@ module.exports = {
 	],
 	exits: [
 		{
-			to: "adminPrompt",
+			to: "mainMenu",
 			on: {
 				x: 35,
 				y: 21
@@ -34,6 +34,29 @@ module.exports = {
 		}
 	],
 	hints: [
-		"I am the processman, I can create and destroy programs."
+		"The only way to access the games menu now is using the Primary Keys.",
+		"This system replaced the index cards to control VHS tape rentals"
 	]
 }
+
+/*
+
+TV Shows
+ Japanimation
+  Robotech
+  Voltron
+ Cartoons
+  The Transformers
+  G.I. Joe
+  SilverHawks
+  Thunder Cats
+ Sci Fi
+  Star Trek
+
+Movies
+ Star Wars
+ Karate Kid
+ Back to the Future
+ Indiana Jones
+
+ */

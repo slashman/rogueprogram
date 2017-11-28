@@ -3,15 +3,15 @@ module.exports = {
 		   //01234567890123456789012345678901234567890123456789012345678901234567890123456789
 		"                                                                                ",
 		"                                                                                ",
-		"              Welcome to Cybertroniks GlobalNet 3.2                             ",
+		"              Welcome to Alameda Video Rental System                            ",
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
 		"                    MAIN MENU                                                   ",
 		"                                                                                ",
-		"                                                                                ",
+		"                     News                                  %                    ",
 		"                   ┌─────────────┐                                              ",
-		"                   │Quotes       │                                              ",
+		"                   │Rent Movie   │                                              ",
 		"              %                  │                                              ",
 		"                   └─────────────┘                                              ",
 		"                   ┌─────────────┐                                              ",
@@ -42,14 +42,21 @@ module.exports = {
 			}
 		},
 		{
-			to: "quotes",
+			to: "news",
+			on: {
+				x: 30,
+				y: 8
+			}
+		},
+		{
+			to: "rentMovie",
 			on: {
 				x: 30,
 				y: 10
 			}
 		},
 		{
-			to: "wordProcess",
+			to: "wordProcessor",
 			on: {
 				x: 30,
 				y: 14
@@ -57,6 +64,7 @@ module.exports = {
 		},
 	],
 	hints: [
-		"Access to the games menu was locked by @root, to prevent productivity loss."
+		"Access to the games menu was locked by @root, to prevent productivity loss.",
+		"The Rogue program is corrupting the system, transforming characters into monsters."
 	]
 }

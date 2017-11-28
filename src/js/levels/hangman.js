@@ -7,16 +7,16 @@ module.exports = {
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
-		"                    PROCESS MANAGER                                             ",
+		"                    HANGMAN                                                     ",
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
-		"                         %                                                      ",
+		"                    %                                                           ",
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
-		"                                                                                ",
+		"                                                      %                         ",
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
@@ -26,7 +26,7 @@ module.exports = {
 	],
 	exits: [
 		{
-			to: "adminPrompt",
+			to: "gamesMenu",
 			on: {
 				x: 35,
 				y: 21
@@ -34,6 +34,7 @@ module.exports = {
 		}
 	],
 	hints: [
-		"I am the processman, I can create and destroy programs."
+		"Everything we know about @root comes from examining his journal archive",
+ 		"The third, and final part of the root password are the last letters of his long dead friend"
 	]
 }

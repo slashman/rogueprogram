@@ -7,16 +7,16 @@ module.exports = {
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
-		"                    PROCESS MANAGER                                             ",
-		"                                                                                ",
-		"                                                                                ",
-		"                                                                                ",
-		"                         %                                                      ",
+		"                    ROGUE                                                       ",
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
+		"                                                                                ",
+		"                                                                                ",
+		"                                                                                ",
+		"                                          %%%                                   ",
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
@@ -26,7 +26,7 @@ module.exports = {
 	],
 	exits: [
 		{
-			to: "adminPrompt",
+			to: "gamesMenu",
 			on: {
 				x: 35,
 				y: 21
@@ -34,6 +34,8 @@ module.exports = {
 		}
 	],
 	hints: [
-		"I am the processman, I can create and destroy programs."
+		"We have blocked the stairways to the lower levels of this program to stop the corruption.",
+ 		"This lock won't last long. The Rogue program must be stopped.",
+ 		"@root was developing his own game based on rogue, he wanted the main character to be a cleric instead."
 	]
 }

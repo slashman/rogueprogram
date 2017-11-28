@@ -6,12 +6,18 @@ var Item = require('./Item.class');
 var Random = require('./Random');
 
 const LEVEL_DEFS = {
-	mainMenu: require('./levels/mainMenu'),
-	gamesMenu: require('./levels/gamesMenu'),
 	adminMenu: require('./levels/adminMenu'),
-	dbStructure: require('./levels/dbStructure'),
 	adminPrompt: require('./levels/adminPrompt'),
+	battleship: require('./levels/battleship'),
+	dbStructure: require('./levels/dbStructure'),
+	gamesMenu: require('./levels/gamesMenu'),
+	hangman: require('./levels/hangman'),
+	mainMenu: require('./levels/mainMenu'),
+	news: require('./levels/news'),
 	processMan: require('./levels/processMan'),
+	rentMovie: require('./levels/rentMovie'),
+	rogue: require('./levels/rogue'),
+	wordProcessor: require('./levels/wordProcessor'),
 } 
 
 module.exports = {

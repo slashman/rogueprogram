@@ -3,7 +3,7 @@ module.exports = {
 		   //01234567890123456789012345678901234567890123456789012345678901234567890123456789
 		"                                                                                ",
 		"                                                                                ",
-		"              Welcome to Cybertroniks GlobalNet 3.2                             ",
+		"              Welcome to Alameda Video Rental System                            ",
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
@@ -11,11 +11,11 @@ module.exports = {
 		"                                                                                ",
 		"                                                                                ",
 		"                   ┌─────────────┐                                              ",
-		"                   │DBStructure  │                                              ",
+		"                   │DBStructure  │                        %                     ",
 		"                                 │                                              ",
 		"                   └─────────────┘                                              ",
 		"                   ┌─────────────┐                                              ",
-		"                   │ProcessMan                                                  ",
+		"                   │ProcessMan                              %                   ",
 		"                   │             │                                              ",
 		"                   └─────────────┘                                              ",
 		"                                                                                ",
@@ -27,13 +27,6 @@ module.exports = {
 		"                                                                                "
 	],
 	exits: [
-		{
-			to: "gamesMenu",
-			on: {
-				x: 5,
-				y: 21
-			}
-		},
 		{
 			to: "mainMenu",
 			on: {
@@ -55,5 +48,9 @@ module.exports = {
 				y: 14
 			}
 		},
+	],
+	hints: [
+		"@root installed this system on March 4, 1981",
+		"The Processman has the power to kill any program, but it is dangerous."
 	]
 }

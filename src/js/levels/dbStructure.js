@@ -10,11 +10,11 @@ module.exports = {
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
-		"                   ┌─────────────┐                                              ",
+		"                   ┌─────────────┐               %                              ",
 		"                   │DBStructure  │                                              ",
 		"                                 │                                              ",
 		"                   └─────────────┘                                              ",
-		"                   ┌─────────────┐                                              ",
+		"                   ┌─────────────┐                %                             ",
 		"                   │ProcessMan                                                  ",
 		"                   │             │                                              ",
 		"                   └─────────────┘                                              ",
@@ -43,5 +43,9 @@ module.exports = {
 				y: 11
 			}
 		}
+	],
+	hints: [
+		"This program controls the organization of data across the system",
+ 		"Once secretary Andropov commanded the nuclear strikes to start, long distance communications were shut down."
 	]
 }

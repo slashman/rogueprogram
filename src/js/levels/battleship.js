@@ -7,17 +7,17 @@ module.exports = {
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
-		"                    PROCESS MANAGER                                             ",
+		"                    BATTLESHIP                                                  ",
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
-		"                         %                                                      ",
+		"                 %                                                              ",
 		"                                                                                ",
 		"                                                                                ",
+		"                %                                                               ",
 		"                                                                                ",
 		"                                                                                ",
-		"                                                                                ",
-		"                                                                                ",
+		"               %                                                                ",
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
@@ -26,7 +26,7 @@ module.exports = {
 	],
 	exits: [
 		{
-			to: "adminPrompt",
+			to: "gamesMenu",
 			on: {
 				x: 35,
 				y: 21
@@ -34,6 +34,8 @@ module.exports = {
 		}
 	],
 	hints: [
-		"I am the processman, I can create and destroy programs."
+		"It's been years since @root last logged in. I believe he will return some day.",
+ 		"This program represents the conflict between the heavenly creators.",
+ 		"The second part of the root password are the last two letters of his preferred scifi movie."
 	]
 }

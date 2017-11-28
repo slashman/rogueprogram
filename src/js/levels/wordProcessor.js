@@ -7,14 +7,14 @@ module.exports = {
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
-		"                    PROCESS MANAGER                                             ",
+		"                    WORD PROCESSORR                                             ",
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
-		"                         %                                                      ",
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
+		"                          %%%                                                   ",
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
@@ -26,7 +26,7 @@ module.exports = {
 	],
 	exits: [
 		{
-			to: "adminPrompt",
+			to: "mainMenu",
 			on: {
 				x: 35,
 				y: 21
@@ -34,6 +34,8 @@ module.exports = {
 		}
 	],
 	hints: [
-		"I am the processman, I can create and destroy programs."
+		"On August 7, 1983, a thermonuclear bomb detonated in Los Angeles. Thousands died.",
+		"@root has no friends... Alenome, his only friend, left him when they were young.",
+ 		"When @root was young, he accidentally killed a hen with a rocking chair."
 	]
 }
