@@ -1,5 +1,6 @@
 var TextBox = require('./ui/TextBox.class');
 var Box = require('./ui/Box.class');
+const col = require('./constants').color
 
 module.exports = {
 	BLANK_TILE: new ut.Tile(' ', 255, 255, 255),
@@ -8,7 +9,7 @@ module.exports = {
 		this.game = game;
 		this.term = new ut.Viewport(document.getElementById("game"), 80, 25);
 		this.eng = new ut.Engine(this.term, this.getDisplayedTile.bind(this), 80, 25);
-		this.textBox = new TextBox(this.term, 2, 80, {x:0, y:0}, this);
+		this.textBox = new TextBox(this.term, 2, 80, {x:0, y:0}, this, col);
 		this.inventoryBox = new Box(this.term, 15, 40, {x:19, y:4});
 		this.centered = config && config.centered;
 	},
@@ -36,14 +37,14 @@ module.exports = {
 			this.eng.update(40, 10);
 		}
 		this.textBox.draw();
-		this.term.putString("  HP: "+this.game.player.hp+"  ", 0, 24, 0, 0, 0, 255, 255, 255);
+		this.term.putString("  HP: "+this.game.player.hp+"  ", 0, 24, 0, 0, 0, col.r, col.g, col.b);
 		this.term.render();
 	},
 	showInventory: function(){
 		this.inventoryBox.draw();
 		var xBase = 20;
 		var yBase = 5;
-		this.term.putString("Inventory", xBase, yBase, 255, 0, 0);
+		this.term.putString("Inventory", xBase, yBase, col.r, col.g, col.b);
 		for (var i = 0; i < this.game.player.items.length; i++){
 			var item = this.game.player.items[i];
 			if (item == this.game.input.selectedItem){
@@ -53,7 +54,7 @@ module.exports = {
 			}
 			this.term.put(item.def.tile, xBase+2, yBase+1+i);
 			this.term.put(item.def.tile, xBase+2, yBase+1+i);
-			this.term.putString(item.def.name, xBase + 4, yBase+1+i, 255, 255, 255);
+			this.term.putString(item.def.name, xBase + 4, yBase+1+i, col.r, col.g, col.b);
 		}
 		this.term.render();
 	},

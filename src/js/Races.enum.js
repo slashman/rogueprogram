@@ -1,13 +1,15 @@
+const c = require('./constants').color
+
 const RACES = {
 	NPC: {
-		tile: new ut.Tile('t', 128, 128, 0)
+		tile: new ut.Tile('t', c.r, c.g, c.b)
 	}
 };
 
 const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-chars.split('').forEach(c=>{
-	RACES[c] = {
-		tile: new ut.Tile(c, 255, 255, 255)
+chars.split('').forEach(ch=>{
+	RACES[ch] = {
+		tile: new ut.Tile(ch, c.r, c.g, c.b)
 	}
 });
 

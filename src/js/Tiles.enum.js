@@ -1,19 +1,21 @@
+const c = require('./constants').color
+
 const tiles = {
 	PORTAL: {
-		tile: new ut.Tile('*', 255, 0, 0),
+		tile: new ut.Tile('*', c.r, c.g, c.b),
 		solid: false
 	},
 	LOCKED_GATE: {
-		tile: new ut.Tile('/', 255, 0, 0),
+		tile: new ut.Tile('/', c.r, c.g, c.b),
 		solid: true,
 		locked: true
 	},
 	UNLOCKED_GATE: {
-		tile: new ut.Tile(' ', 255, 0, 0),
+		tile: new ut.Tile(' ', c.r, c.g, c.b),
 		solid: false
 	},
 	' ': {
-		tile: new ut.Tile(' ', 0, 128, 0),
+		tile: new ut.Tile(' ', c.r, c.g, c.b),
 		solid: false
 	}
 };
@@ -23,9 +25,9 @@ tiles[' '] = tiles[' '];
 
 const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789*-│┤╣║╗╝┐└┴┬├─┼╚╔╩╦╠═╬┘┌░▒▓[]"
 
-chars.split('').forEach(c=>{
-	tiles[c] = {
-		tile: new ut.Tile(c, 255, 255, 255),
+chars.split('').forEach(ch=>{
+	tiles[ch] = {
+		tile: new ut.Tile(ch, c.r, c.g, c.b),
 		solid: true
 	}
 });

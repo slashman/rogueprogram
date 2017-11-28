@@ -1,12 +1,13 @@
 const Random = require('./Random');
 const Item = require('./Item.class');
 const Items = require('./Items.enum');
+const c = require('./constants').color
 
 module.exports = {
 	x: 15,
 	y: 10,
 	hp: 30,
-	tile: new ut.Tile('@', 255, 255, 255),
+	tile: new ut.Tile('@', c.r, c.g, c.b),
 	items: [],
 	init: function(game){
 		this.game = game;

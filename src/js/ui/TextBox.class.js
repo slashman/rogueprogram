@@ -7,7 +7,7 @@
  * @author Eben Howard
  */
  
-function TextBox (term, height, width, position, display) {
+function TextBox (term, height, width, position, display, col) {
 	this.display = display;
 	this.term = term;
 	this.curx = 0;
@@ -25,11 +25,12 @@ function TextBox (term, height, width, position, display) {
 		this.spaces += " ";
 	}
 	this.lastUpdateMillis = 0;
+	this.col = col;
 }
 
 TextBox.prototype.draw = function(){
 	 for (var i = 0; i < this.lines.length; i++) {
-		this.term.putString(this.lines[i], this.position.x, this.position.y + i, 255, 255, 255);
+		this.term.putString(this.lines[i], this.position.x, this.position.y + i, this.col.r, this.col.g, this.col.b);
      }
 };
 
