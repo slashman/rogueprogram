@@ -11,8 +11,10 @@ module.exports = {
 			if (cell.locked){
 				game.display.message("You unlock the logical gate using the Primary Key");
 				game.world.level.setCellAt(player.x + dx, player.y+dy, Tiles.UNLOCKED_GATE);
+				return true;
 			} else {
 				game.display.message("Nothing happens");
+				return false;
 			}
 		}
 	},
@@ -20,6 +22,7 @@ module.exports = {
 		name: 'Character',
 		useFunction: function(game){
 			game.display.message("Nothing happens");
+			return false;
 		}
 	},
 	POTION: {
@@ -28,6 +31,7 @@ module.exports = {
 			const recovery = Random.n(15, 25)
 			game.display.message(`You use the potion, you recover ${recovery} hit points`);
 			game.player.recover(recovery);
+			return true;
 		}
 	}
 }

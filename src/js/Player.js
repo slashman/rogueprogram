@@ -6,8 +6,8 @@ const c = require('./constants').color
 const MAX_HP = 60;
 
 module.exports = {
-	x: 15,
-	y: 10,
+	x: 65,
+	y: 18,
 	hp: MAX_HP,
 	tile: new ut.Tile('☻', c.r, c.g, c.b),
 	items: [],
@@ -30,7 +30,7 @@ module.exports = {
 		if (being){
 			if (being.friendly){
 				if (being.hint){
-					this.game.display.message(`"${being.hint}"`);
+					this.game.display.message(`${being.hint}`);
 				}
 			} else {
 				//Attack!
@@ -109,7 +109,10 @@ module.exports = {
 		}
 	},
 	tryUse: function(item, dx, dy){
-		item.def.type.useFunction(this.game, item, dx, dy);
+		const used = item.def.type.useFunction(this.game, item, dx, dy);
+		if (used){
+			this.removeItem(item);
+		}
 	},
 	damage: function(damage){
 		this.hp -= damage;

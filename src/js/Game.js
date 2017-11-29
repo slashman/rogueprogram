@@ -18,8 +18,7 @@ var Game = {
 		World.init(this);
 		Input.init(this);
 		Display.refresh();
-		Display.textBox.setText("You enter the Main Menu. Move around using the arrow keys. Follow the * to move between programs");
-		Player.addItem(new Item(Items.PRIMARY_KEY));
+		Display.textBox.setText("Welcome to the Main Menu. Move around using the arrow keys. Step into the * to move between programs. Seek the ☺ characters for info.");
 	}
 }
 
