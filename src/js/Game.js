@@ -9,6 +9,10 @@ var Items = require('./Items.enum');
 
 var Game = {
 	start: function(){
+		setTimeout(()=>this._start(), 3000);
+	},
+	_start: function(){
+		document.getElementById("fontLoader").innerHTML = '';
 		this.display = Display;
 		this.world = World;
 		this.player = Player;
