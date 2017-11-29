@@ -10,8 +10,13 @@ const ITEM_TYPES = {
 	},
 	POTION: {
 		type: ItemType.POTION,
-		name: 'Potion',
+		name: 'Life Potion',
 		tile: new ut.Tile('!', c.r, c.g, c.b),
+	},
+	MAGIC_WAND: {
+		type: ItemType.WAND,
+		name: 'Magic Wand',
+		tile: new ut.Tile('/', c.r, c.g, c.b),
 	},
 }
 

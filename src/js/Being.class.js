@@ -1,5 +1,7 @@
 var Random = require('./Random');
 var Geo = require('./Geo');
+const Item = require('./Item.class');
+const Items = require('./Items.enum');
 
 function Being(game, level, race){
 	this.game = game;
@@ -63,6 +65,15 @@ Being.prototype = {
 		if (!this.level.beings[this.x])
 			this.level.beings[this.x] = [];
 		this.level.beings[this.x][this.y] = this;
+	},
+	damage: function(damage){
+		this.hp -= damage;
+		
+		if (this.hp <= 0){
+			this.game.display.message(`The ${this.name} dies!`);
+			this.game.world.level.removeBeing(this);
+			this.game.world.level.addItem(this.x, this.y, new Item(Items[`${this.name}_CHARACTER`]));
+		}
 	}
 }
 

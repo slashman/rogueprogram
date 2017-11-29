@@ -1,6 +1,4 @@
 const Random = require('./Random');
-const Item = require('./Item.class');
-const Items = require('./Items.enum');
 const c = require('./constants').color
 
 const MAX_HP = 60;
@@ -15,14 +13,8 @@ module.exports = {
 		this.game = game;
 	},
 	attackMonster: function(m){
-		const damage = Random.n(1,3);
-		m.hp -= damage;
 		this.game.display.message(`You hit the ${m.name}.`);
-		if (m.hp <= 0){
-			this.game.display.message(`The ${m.name} dies!`);
-			this.game.world.level.removeBeing(m);
-			this.game.world.level.addItem(m.x, m.y, new Item(Items[`${m.name}_CHARACTER`]));
-		}
+		m.damage(Random.n(1,3))
 	},
 	tryMove: function(dir){
 		const level = this.game.world.level;
@@ -90,9 +82,9 @@ module.exports = {
 		var item = this.game.world.level.getItem(this.x, this.y);
 		if (item){
 			if (!this.canPick()){
-				this.game.display.message("You can't pickup the "+item.def.name);
+				this.game.display.message("You can't pickup the "+item.def.name+".");
 			} else {
-				this.game.display.message("You pickup the "+item.def.name);
+				this.game.display.message("You pickup the "+item.def.name+".");
 				this.game.world.level.removeItem(this.x, this.y);
 				this.addItem(item);
 			}
@@ -118,7 +110,7 @@ module.exports = {
 		this.hp -= damage;
 		if (this.hp <= 0){
 			this.hp = 0;
-			this.game.display.message("You have been destroyed.");
+			this.game.display.message("You have been deleted.");
 			this.dead = true;
 		}
 	},

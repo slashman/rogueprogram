@@ -46,6 +46,9 @@ module.exports = {
 				} else if (chara === '$') {
 					level.addItem(x, y, new Item(Items.PRIMARY_KEY));
 					level.map[x][y] = Tiles[' '];
+				} else if (chara === '/') {
+					level.addItem(x, y, new Item(Items.MAGIC_WAND));
+					level.map[x][y] = Tiles[' '];
 				} else if (chara === '*') {
 					level.map[x][y] = Tiles[' '];
 					const exit = def.exits[exitCounter++];
