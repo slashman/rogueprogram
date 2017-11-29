@@ -31,5 +31,6 @@ module.exports = {
 	hints: [
 		"This program controls the organization of data across the system",
  		"Once secretary Andropov commanded the nuclear strikes to start, long distance communications were shut down."
-	]
+	],
+	welcomeMessage: "You are now inspecting the database structure."
 }

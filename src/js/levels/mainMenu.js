@@ -33,5 +33,6 @@ module.exports = {
 	hints: [
 		"Access to the games menu was locked by @root, to prevent productivity loss.",
 		"The Rogue program is corrupting the system, transforming characters into monsters."
-	]
+	],
+	welcomeMessage: "You return to the main menu."
 }

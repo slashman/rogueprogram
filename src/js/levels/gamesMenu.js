@@ -43,5 +43,6 @@ module.exports = {
 		"@root used to enjoy playing these games",
  		"Hints to the root password can be found within the games.",
  		"The first two characters of the root password are @root's favorite Dungeons and Dragons class"
-	]
+	],
+	welcomeMessage: "The joy! you are now into the games menu."
 }

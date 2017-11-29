@@ -37,5 +37,6 @@ module.exports = {
 	hints: [
 		"@root installed this system on March 4, 1981",
 		"The Processman has the power to kill any program, but it is dangerous."
-	]
+	],
+	welcomeMessage: "You enter the Administrator Menu."
 }

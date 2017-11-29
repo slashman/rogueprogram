@@ -49,5 +49,6 @@ module.exports = {
 		{
 			to: "adminMenu"
 		}
-	]
+	],
+	welcomeMessage: "A pop up window appears."
 }

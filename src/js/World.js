@@ -22,6 +22,8 @@ module.exports = {
 			LevelGenerator.generateLevel(this.game, this.level, levelId);
 			this.levels[levelId] = this.level;
 		}
+		if (this.level.welcomeMessage)
+			this.game.display.message(this.level.welcomeMessage);
 		if (previousLevelId) {
 			const exit = this.level.getExitTo(previousLevelId);
 			if (exit){

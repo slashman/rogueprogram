@@ -68,5 +68,6 @@ module.exports = {
 		if (def.items) def.items.forEach(e=>{
 			level.addItem(e.on.x, e.on.y, new Item(Items[e.id]));
 		});
+		level.welcomeMessage = def.welcomeMessage;
 	}
 }

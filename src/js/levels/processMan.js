@@ -26,5 +26,6 @@ module.exports = {
 	exits: [{to: "adminPrompt"}],
 	hints: [
 		"I am the processman, I can create and destroy programs."
-	]
+	],
+	welcomeMessage: "ACCESS GRANTED."
 }
