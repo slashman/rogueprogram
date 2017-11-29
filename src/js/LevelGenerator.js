@@ -25,6 +25,7 @@ module.exports = {
 		const def = LEVEL_DEFS[defId];
 		const map = def.baseMap;
 		let hintCounter = 0;
+		let exitCounter = 0;
 		for (var y = 0; y < map.length; y++){
 			for (var x = 0; x < map[0].length; x++){
 				if (!level.map[x]){
@@ -42,6 +43,10 @@ module.exports = {
 				} else if (chara === '!') {
 					level.addItem(x, y, new Item(Items.POTION));
 					level.map[x][y] = Tiles[' '];
+				} else if (chara === '*') {
+					level.map[x][y] = Tiles[' '];
+					const exit = def.exits[exitCounter++];
+					level.addExit(x, y, exit.to, Tiles.PORTAL, exit.validator);
 				} else if (chara === '%') {
 					const npc = new Being(game, level, Races.NPC);
 					npc.hint = def.hints[hintCounter++];
@@ -54,9 +59,6 @@ module.exports = {
 				}
 			}
 		}
-		def.exits.forEach(e=>{
-			level.addExit(e.on.x, e.on.y, e.to, Tiles.PORTAL, e.validator);
-		});
 		if (def.items) def.items.forEach(e=>{
 			level.addItem(e.on.x, e.on.y, new Item(Items[e.id]));
 		});
