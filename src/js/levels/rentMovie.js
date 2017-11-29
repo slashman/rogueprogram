@@ -5,7 +5,7 @@ module.exports = {
 "  ║                  MOVIES AND SERIES CATALOG                               ║  ",
 "  ║                                                                          ║  ",
 "  ╚══════════════════════════════════════════════════════════════════════════╝  ",
-"                                                                                ",
+"                                                                            %   ",
 "   Search:                                                                      ",
 "  ┌──────────────────────────────────────────────────────────────────────────┐  ",
 "  │Title                  Type        Cat              Sta          Cust     │  ",
@@ -25,6 +25,7 @@ module.exports = {
 	],
 	exits: [{to: "mainMenu"}],
 	hints: [
+		"Certain characters, like the !, can be used to recover health",
 		"The only way to access the games menu now is using the Primary Keys.",
 		"This system replaced the index cards to control VHS tape rentals"
 	]
