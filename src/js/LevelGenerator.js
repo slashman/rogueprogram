@@ -39,6 +39,9 @@ module.exports = {
 					monster.intent = 'WAIT';
 					level.addBeing(x, y, monster);
 					level.map[x][y] = Tiles[' '];
+				} else if (chara === '!') {
+					level.addItem(x, y, new Item(Items.POTION));
+					level.map[x][y] = Tiles[' '];
 				} else if (chara === '%') {
 					const npc = new Being(game, level, Races.NPC);
 					npc.hint = def.hints[hintCounter++];

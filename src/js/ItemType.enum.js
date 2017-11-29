@@ -1,4 +1,5 @@
 var Tiles = require('./Tiles.enum');
+var Random = require('./Random');
 
 module.exports = {
 	KEY: {
@@ -21,23 +22,12 @@ module.exports = {
 			game.display.message("Nothing happens");
 		}
 	},
-	WEAPON: {
-		name: 'Weapon',
+	POTION: {
+		name: 'Potion',
 		useFunction: function(game, item){
-			game.display.message("You wield the "+item.def.name);
-		}
-	},
-	BOOK: {
-		name: 'Book',
-		useFunction: function(game, item){
-			game.display.message("You read the "+item.def.name);
-		}
-	},
-	SPELL: {
-		name: 'Spell',
-		targetted: true,
-		useFunction: function(game, item, dx, dy){
-			game.display.message("You cast the "+item.def.name+" in direction x "+dx+" y "+dy);
+			const recovery = Random.n(15, 25)
+			game.display.message(`You use the potion, you recover ${recovery} hit points`);
+			game.player.recover(recovery);
 		}
 	}
 }

@@ -3,10 +3,12 @@ const Item = require('./Item.class');
 const Items = require('./Items.enum');
 const c = require('./constants').color
 
+const MAX_HP = 60;
+
 module.exports = {
 	x: 15,
 	y: 10,
-	hp: 30,
+	hp: MAX_HP,
 	tile: new ut.Tile('@', c.r, c.g, c.b),
 	items: [],
 	init: function(game){
@@ -112,8 +114,14 @@ module.exports = {
 	damage: function(damage){
 		this.hp -= damage;
 		if (this.hp <= 0){
+			this.hp = 0;
 			this.game.display.message("You have been destroyed.");
 			this.dead = true;
 		}
+	},
+	recover: function(recovery){
+		this.hp += recovery;
+		if (this.hp > MAX_HP)
+			this.hp = MAX_HP;
 	}
 }

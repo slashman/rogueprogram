@@ -7,7 +7,12 @@ const ITEM_TYPES = {
 		type: ItemType.KEY,
 		name: 'Primary Key',
 		tile: new ut.Tile('%', c.r, c.g, c.b),
-	}
+	},
+	POTION: {
+		type: ItemType.POTION,
+		name: 'Potion',
+		tile: new ut.Tile('!', c.r, c.g, c.b),
+	},
 }
 
 const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
