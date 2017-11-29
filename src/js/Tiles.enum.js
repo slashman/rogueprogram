@@ -23,8 +23,8 @@ const tiles = {
 tiles['+'] = tiles.LOCKED_GATE;
 tiles[' '] = tiles[' '];
 
-const solidChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.╣║╗╝╚╔╩╦╠═╬[]"
-const liquidChars = "│┤┐└┴┬├─┼┌┘█-"
+const solidChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.╣║╗╝╚╔╩╦╠═╬[]╧☻♠♣♥▼/\\"
+const liquidChars = "│┤┐└┴┬├─┼┌┘█▀▐-"
 
 solidChars.split('').forEach(ch=>{
 	tiles[ch] = {
