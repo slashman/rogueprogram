@@ -6,7 +6,7 @@ const ITEM_TYPES = {
 	PRIMARY_KEY: {
 		type: ItemType.KEY,
 		name: 'Primary Key',
-		tile: new ut.Tile('%', c.r, c.g, c.b),
+		tile: new ut.Tile('$', c.r, c.g, c.b),
 	},
 	POTION: {
 		type: ItemType.POTION,

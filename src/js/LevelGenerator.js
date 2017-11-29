@@ -43,6 +43,9 @@ module.exports = {
 				} else if (chara === '!') {
 					level.addItem(x, y, new Item(Items.POTION));
 					level.map[x][y] = Tiles[' '];
+				} else if (chara === '$') {
+					level.addItem(x, y, new Item(Items.PRIMARY_KEY));
+					level.map[x][y] = Tiles[' '];
 				} else if (chara === '*') {
 					level.map[x][y] = Tiles[' '];
 					const exit = def.exits[exitCounter++];
