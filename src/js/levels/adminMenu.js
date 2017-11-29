@@ -1,53 +1,38 @@
 module.exports = {
 	baseMap: [
-		   //01234567890123456789012345678901234567890123456789012345678901234567890123456789
-		"                                                                                ",
-		"                                                                                ",
-		"              Welcome to Alameda Video Rental System                            ",
-		"                                                                                ",
-		"                                                                                ",
-		"                                                                                ",
-		"                    ADMINMENU   !!!                                             ",
-		"                                                                                ",
-		"                                                                                ",
-		"                   ┌─────────────┐                                              ",
-		"                   │DBStructure  │                        %                     ",
-		"                                 │                                              ",
-		"                   └─────────────┘                                              ",
-		"                   ┌─────────────┐                                              ",
-		"                   │ProcessMan                              %                   ",
-		"                   │             │                                              ",
-		"                   └─────────────┘                                              ",
-		"                                                                                ",
-		"                                                                                ",
-		" ╔═══════════════════════════ ═╦═ ════════════════════════╗                     ",
-		" ║   MENU 2  GAMES             ║  MENU 1   Main Menu      ║                     ",
-		" ║                             ║                          ║                     ",
-		" ╚═════════════════════════════╩══════════════════════════╝                     ",
-		"                                                                                "
+"                                                                                ",
+"                                                                                ",
+"  ┌──[ Admin Toolkit ]────┐                                                     ",
+"  │                       │                                                     ",
+"  │                       │                                                     ",
+"  │                       │                                                     ",
+"  │ * Database Structure  │                                                     ",
+"  │                       │                                                     ",
+"  │ * Process Manager     │   %                                                 ",
+"  │                       │                                                     ",
+"  │                       │                                                     ",
+"  │                       │                                                     ",
+"  │ * Back to Main Menu   │                                                     ",
+"  │                       │                                                     ",
+"  └───────────────────────┘                                                     ",
+"                                                                                ",
+"                                                                                ",
+"                                                                                ",
+"                            %                                                   ",
+"                                                                                ",
+"                                                                                ",
+"                                                                                "
 	],
 	exits: [
 		{
-			to: "mainMenu",
-			on: {
-				x: 35,
-				y: 21
-			}
+			to: "dbStructure"
 		},
 		{
-			to: "dbStructure",
-			on: {
-				x: 30,
-				y: 10
-			}
+			to: "adminPrompt"
 		},
 		{
-			to: "adminPrompt",
-			on: {
-				x: 30,
-				y: 14
-			}
-		},
+			to: "mainMenu"
+		}
 	],
 	hints: [
 		"@root installed this system on March 4, 1981",
