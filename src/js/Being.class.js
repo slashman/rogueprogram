@@ -22,6 +22,8 @@ Being.prototype = {
 		}
 	},
 	actRandom: function(){
+		if (Random.chance(70))
+			return;
 		var dx = Random.n(-1, 1);
 		var dy = Random.n(-1, 1);
 		if (!this.level.canWalkTo(this.x+dx,this.y+dy)){
