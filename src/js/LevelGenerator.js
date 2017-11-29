@@ -8,7 +8,7 @@ var Random = require('./Random');
 const LEVEL_DEFS = {
 	adminMenu: require('./levels/adminMenu'),
 	adminPrompt: require('./levels/adminPrompt'),
-	battleship: require('./levels/battleship'),
+	munchman: require('./levels/munchman'),
 	dbStructure: require('./levels/dbStructure'),
 	gamesMenu: require('./levels/gamesMenu'),
 	hangman: require('./levels/hangman'),
