@@ -2,7 +2,7 @@ const c = require('./constants').color
 
 const RACES = {
 	NPC: {
-		tile: new ut.Tile('t', c.r, c.g, c.b)
+		tile: new ut.Tile('☺', c.r, c.g, c.b)
 	}
 };
 

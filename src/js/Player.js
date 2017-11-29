@@ -9,7 +9,7 @@ module.exports = {
 	x: 15,
 	y: 10,
 	hp: MAX_HP,
-	tile: new ut.Tile('@', c.r, c.g, c.b),
+	tile: new ut.Tile('☻', c.r, c.g, c.b),
 	items: [],
 	init: function(game){
 		this.game = game;
