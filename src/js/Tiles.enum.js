@@ -6,7 +6,7 @@ const tiles = {
 		solid: false
 	},
 	LOCKED_GATE: {
-		tile: new ut.Tile('/', c.r, c.g, c.b),
+		tile: new ut.Tile('+', c.r, c.g, c.b),
 		solid: true,
 		locked: true
 	},
@@ -20,15 +20,23 @@ const tiles = {
 	}
 };
 
-tiles['/'] = tiles.LOCKED_GATE;
+tiles['+'] = tiles.LOCKED_GATE;
 tiles[' '] = tiles[' '];
 
-const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789*-│┤╣║╗╝┐└┴┬├─┼╚╔╩╦╠═╬┘┌░▒▓[]"
+const solidChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.╣║╗╝╚╔╩╦╠═╬[]"
+const liquidChars = "│┤┐└┴┬├─┼┌┘█-"
 
-chars.split('').forEach(ch=>{
+solidChars.split('').forEach(ch=>{
 	tiles[ch] = {
 		tile: new ut.Tile(ch, c.r, c.g, c.b),
 		solid: true
+	}
+});
+
+liquidChars.split('').forEach(ch=>{
+	tiles[ch] = {
+		tile: new ut.Tile(ch, c.r, c.g, c.b),
+		solid: false
 	}
 });
 
