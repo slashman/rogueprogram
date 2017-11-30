@@ -190,11 +190,11 @@ ut.Viewport = function(elem, w, h, renderer, squarify) {
 				this.renderer = new ut.WebGLRenderer(this);
 			} catch (e) {
 				console.error(e);
-				newrenderer = "canvas";
+				newrenderer = "dom";
 				this.elem.innerHTML = "";
 			}
 		}
-		if (newrenderer === "canvas") {
+		/*if (newrenderer === "canvas") {
 			try {
 				this.renderer = new ut.CanvasRenderer(this);
 			} catch (e) {
@@ -202,7 +202,7 @@ ut.Viewport = function(elem, w, h, renderer, squarify) {
 				newrenderer = "dom";
 				this.elem.innerHTML = "";
 			}
-		}
+		}*/
 		if (newrenderer === "dom") {
 			this.renderer = new ut.DOMRenderer(this);
 		}
