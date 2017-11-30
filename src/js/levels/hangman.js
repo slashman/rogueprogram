@@ -14,7 +14,7 @@ module.exports = {
 "                                                       │ │ │                    ",
 "                                                       │ └─┘                    ",
 "                                                %      │                        ",
-"                      Guess a letter                                            ",
+"                      Guess a letter!                                           ",
 "                                                                                ",
 "                                                                                ",
 "                                                                                ",

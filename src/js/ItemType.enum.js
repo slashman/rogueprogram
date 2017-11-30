@@ -28,7 +28,7 @@ module.exports = {
 	POTION: {
 		name: 'Potion',
 		useFunction: function(game, item){
-			const recovery = Random.n(15, 25)
+			const recovery = Random.n(25, 45)
 			game.display.message(`You quaff the potion. You recover ${recovery} hit points.`);
 			game.player.recover(recovery);
 			return true;

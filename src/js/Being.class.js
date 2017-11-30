@@ -67,7 +67,7 @@ Being.prototype = {
 	},
 	attackPlayer: function() {
 		this.game.display.message(`The ${this.name} hits you.`);
-		this.game.player.damage(Random.n(1,3));
+		this.game.player.damage(Random.n(1,2));
 	},
 	getNearestEnemy: function(){
 		if (Geo.distance(this, this.game.player) > this.sightRange)
