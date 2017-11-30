@@ -95,9 +95,9 @@ Level.prototype = {
 		this.items[x][y] = false;
 	},
 	getPassword: function(){
-		const passwordLocation = {x: 19, y:17};
+		const passwordLocation = {x: 33, y:15};
 		let password = "";
-		for (let i = 0; i < 4; i++){
+		for (let i = 0; i < 6; i++){
 			const item = this.getItem(passwordLocation.x+i, passwordLocation.y);
 			if (item && item.def.charValue)
 				password += item.def.charValue;

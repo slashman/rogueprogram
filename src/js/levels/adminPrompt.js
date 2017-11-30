@@ -36,9 +36,8 @@ module.exports = {
 		{
 			to: "processMan",
 			validator: function(game){
-				const password = "abXY";
 				const enteredPassword = game.world.level.getPassword();
-				if (password !== enteredPassword){
+				if ("CLREME" !== enteredPassword){
 					game.display.message("ACCESS DENIED");
 					return false;
 				} else {
