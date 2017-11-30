@@ -6,3 +6,5 @@ the program manager to kill the process and keep the balance on the
 software.
 
 Play online at https://slash.itch.io/rogue-program
+
+Made for 2017 #GitHubGameOff
