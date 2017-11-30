@@ -29,8 +29,8 @@ module.exports = {
 		}
 	],
 	hints: [
-		"To pick up items, use the comma key while standing on them",
-		"This program controls the organization of data across the system",
+		"@root has a little sister, she likes to draw birds and trees.",
+		"This program controls the organization of data across the system.",
  		"Once secretary Andropov commanded the nuclear strikes to start, long distance communications were shut down.",
 	],
 	welcomeMessage: "You are now inspecting the database structure.",

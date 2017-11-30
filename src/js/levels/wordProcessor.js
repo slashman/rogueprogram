@@ -27,7 +27,7 @@ module.exports = {
 	hints: [
 		"On August 7, 1983, a thermonuclear bomb detonated in Los Angeles. Thousands died.",
 		"@root has no friends... Alenome, his only friend, left him when they were young.",
- 		"When @root was young, he accidentally killed a hen with a rocking chair."
+ 		"When @root was young, he accidentally killed a chicken with a rocking chair."
 	],
 	welcomeMessage: "Loading last edited document."
 }
