@@ -72,6 +72,13 @@ Level.prototype = {
 	getExitTo: function(levelId) {
 		return this.exitPositions[levelId];
 	},
+	removeExitTo: function(levelId){
+		const exit = this.getExitTo(levelId);
+		if (exit){
+			this.exits[exit.x][exit.y] = false;
+			this.exitPositions[levelId] = false;
+		}
+	},
 	addItem: function(x, y, item){
 		if (!this.items[x])
 			this.items[x] = [];

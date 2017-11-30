@@ -2,6 +2,8 @@ var Random = require('./Random');
 var Geo = require('./Geo');
 const Item = require('./Item.class');
 const Items = require('./Items.enum');
+const color = require('./constants').color;
+
 
 function Being(game, level, race){
 	this.game = game;
@@ -21,6 +23,22 @@ Being.prototype = {
 			case 'WAIT':
 				this.actWait();
 				break;
+			case 'PROCESSMAN':
+				this.actProcessman();
+				break;
+		}
+	},
+	actProcessman: function(){
+		if (Geo.distance(this, this.game.player) < 10){
+			if (this.quoteCounter ===this.quotes.length){
+				this.friendly = false;
+				this.name = "Rogue Program";
+				this.tile = new ut.Tile('@', color.r, color.g, color.b);
+				this.intent = 'WAIT';
+				this.level.removeExitTo('adminPrompt')
+			} else {
+				this.game.display.message(this.quotes[this.quoteCounter++], true);
+			}
 		}
 	},
 	actRandom: function(){
@@ -52,7 +70,7 @@ Being.prototype = {
 		this.game.player.damage(Random.n(1,3));
 	},
 	getNearestEnemy: function(){
-		if (Geo.distance(this, this.game.player) > 5)
+		if (Geo.distance(this, this.game.player) > this.sightRange)
 			return false;
 		if (this.game.player.dead)
 			return false;

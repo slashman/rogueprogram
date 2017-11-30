@@ -37,6 +37,7 @@ module.exports = {
 					monster.friendly = false;
 					monster.name = chara;
 					monster.hp = Random.n(3,10);
+					monster.sightRange = 5;
 					monster.intent = 'WAIT';
 					level.addBeing(x, y, monster);
 					level.map[x][y] = Tiles[' '];
@@ -57,7 +58,25 @@ module.exports = {
 					const npc = new Being(game, level, Races.NPC);
 					npc.hint = def.hints[hintCounter++];
 					npc.friendly = true;
-					npc.intent = 'RANDOM';
+					if (npc.hint === 'processman'){
+						npc.intent = 'PROCESSMAN';
+						npc.sightRange = 15;
+						npc.hp = 220;
+						npc.quoteCounter = 0;
+						npc.quotes = [
+							"I am the processMan, I can kill programs as I please.",
+							"This ROGUE program has caused enough havoc, it's time to banish it from memory.",
+							"What... what's going on? I... I can't move!",
+							"It's... too late! It's taking control of me!",
+							"Run while you can! I... am too powerful for.... a lousy character like you...",
+							"It's the end... the system is doomed to be corrupted!",
+							"WAAAAAAARRRRRGHHH!!!!!"
+						]
+					} else {
+						npc.intent = 'RANDOM';
+						npc.sightRange = 5;
+						npc.hp = 1;
+					}
 					level.addBeing(x, y, npc);
 					level.map[x][y] = Tiles[' '];
 				} else {

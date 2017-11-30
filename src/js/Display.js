@@ -62,9 +62,14 @@ module.exports = {
 		this.term.clear();
 		this.refresh();		
 	},
-	message: function(str){
-		this.textBox.addText(str);
+	message: function(str, deleteNext){
+		if (this.deleteNext){
+			this.textBox.setText(str);
+		} else {
+			this.textBox.addText(str);
+		}
 		this.textBox.draw();
 		this.term.render();
+		this.deleteNext = deleteNext;
 	}
 }
