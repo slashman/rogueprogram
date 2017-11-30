@@ -16,7 +16,7 @@ module.exports = {
 			}
 			if (k === ut.KEY_I){
 				if (this.game.player.items.length === 0){
-					this.game.display.message("You don't have any items");
+					this.game.display.message("You don't have any items.");
 					return;
 				}
 				this.mode = 'INVENTORY';
