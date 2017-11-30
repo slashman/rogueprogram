@@ -13,7 +13,7 @@ module.exports = {
 "│                                      ││                                      │",
 "│USSR Threatens to deploy new troops...││ARPANET is switching to the Interne...│",
 "│                                      ││                                      │",
-"│President Reagan to address the nat...││Atari 5200 released, for $269.99 yo...│",
+"│President  eagan to address the nat...││Atari 5200 released, for $269.99 yo...│",
 "│                                      ││                                      │",
 "│The new axis! is there hope for our...││The Return of the JEDI to hit the c...│",
 "│      %                               ││                                      │",
@@ -28,5 +28,8 @@ module.exports = {
 		"This news feed connects to a BBS using a high speed 2400 baud interface.",
 		"We stopped receiving updates on September 13, 1983."
 	],
-	welcomeMessage: "You check the News feed."
+	welcomeMessage: "You check the News feed.",
+	items: [
+		{on: {x: 11, y: 13}, id: 'R_CHARACTER'}
+	],
 }

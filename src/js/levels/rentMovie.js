@@ -13,7 +13,7 @@ module.exports = {
 "  │G.I. Joe               Series      Cartoon          RENTED       MTOY     │  ",
 "  │Thundercats            Series      Cartoon          RENTED       GWICH    │  ",
 "  │Star Trek              Series      Science Fiction  AVAILABLE             │  ",
-"  │Star Wars              Movie       Science Fiction  RENTED       MADMAX   │  ",
+"  │Star Wars              Movie       Science Fiction  RENTED        ADMAX   │  ",
 "  │Karate Kid             Movie       Action           AVAILABLE             │  ",
 "  │Back to the Future     Movie       Science Fiction  RENTED       SLASH    │  ",
 "  │Indiana Jones 2        Movie       Action           AVAILABLE             │  ",
@@ -29,5 +29,8 @@ module.exports = {
 		"The only way to access the games menu now is using the Primary Keys.",
 		"This system replaced the index cards to control VHS tape rentals"
 	],
-	welcomeMessage: "You access the movies catalog."
+	welcomeMessage: "You access the movies catalog.",
+	items: [
+		{on: {x: 68, y: 13}, id: 'M_CHARACTER'}
+	]
 }

@@ -10,7 +10,7 @@ module.exports = {
 "   █████ █     █████ █ █ █ ████  █   █ █████              ┌┤                │   ",
 "   █   █ █     █   █ █   █ █     █   █ █   █              ││ * Catalog      │   ",
 "   █   █ █████ █   █ █   █ █████ ████  █   █              ││                │   ",
-"                                                          ││ * Write Letter │   ",
+"                                                          ││ * Write  etter │   ",
 "   █   █ █████ ████  █████  ███                           ││                │   ",
 "   █   █   █   █   █ █     █   █                          ││ * Daily News   │   ",
 "   █   █   █   █   █ ████  █   █                          ││                │   ",
@@ -20,7 +20,7 @@ module.exports = {
 "  ╔═══════════════════════╦ ╦ ╦══════════════════════════╗                      ",
 "  ║      MENU 2           ║+║-║        MENU 3            ║                      ",
 "  ║                       ╝+║-╚                          ║                      ",
-"  ║   * Computer Games    ++║--    Admin Toolkit *       ║              %       ",
+"  ║   *  omputer Games    ++║--    Admin Toolkit *       ║              %       ",
 "  ╚═════════════════════════╩════════════════════════════╝                      "
 	],
 	exits: [
@@ -33,6 +33,10 @@ module.exports = {
 	hints: [
 		"Access to the games menu was locked by @root, to prevent productivity loss.",
 		"The Rogue program is corrupting the system, transforming characters into monsters."
+	],
+	items: [
+		{on: {x: 8, y: 20}, id: 'C_CHARACTER'},
+		{on: {x: 69, y: 10}, id: 'L_CHARACTER'}
 	],
 	welcomeMessage: "You return to the main menu."
 }
