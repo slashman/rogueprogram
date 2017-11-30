@@ -1,0 +1,9 @@
+Libraries
+* Based on JSRL JavaScript Roguelike Boilerplate - https://github.com/slashman/jsrl
+* Uses unicodetiles for IO - http://tapiov.net/unicodetiles.js/
+
+Tools
+* REXPaint by GridSageGames was used to draw the maps http://www.gridsagegames.com/rexpaint/
+
+Cover Image:
+* Uses "Burnt & Abandoned Computer" by "darkday", cc-by 2.0 https://www.flickr.com/photos/drainrat/13262802714/

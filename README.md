@@ -1,7 +1,8 @@
-# Rogue Program
+(https://github.com/slashman/rogueprogram/raw/master/res/rogueProgram.jpg)
 
-The ROGUE program threatens to destroy the Cybertroniks Inc network. Can you stop it?
+​The ROGUE program has activated and is corrupting the characters on the 
+AVRS system, transforming them into monsters. Our only hope is summoning
+the program manager to kill the process and keep the balance on the 
+software.
 
-# Credits
-Based on JSRL JavaScript Roguelike Boilerplate - https://github.com/slashman/jsrl
-Uses unicodetiles for IO - http://tapiov.net/unicodetiles.js/
+Play online at https://slash.itch.io/rogue-program
