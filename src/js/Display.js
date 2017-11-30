@@ -4,7 +4,7 @@ const col = require('./constants').color
 
 module.exports = {
 	BLANK_TILE: new ut.Tile(' ', 255, 255, 255),
-	CURSOR_TILE: new ut.Tile('*', 255, 255, 255),
+	CURSOR_TILE: new ut.Tile('*', col.r, col.g, col.b),
 	init: function(game, config){
 		this.game = game;
 		this.term = new ut.Viewport(document.getElementById("game"), 80, 25);
