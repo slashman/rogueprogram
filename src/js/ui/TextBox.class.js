@@ -41,7 +41,7 @@ TextBox.prototype.overgrown = function(){
 
 TextBox.prototype.checkFaint = function(){
 	var currentTime = new Date().getTime();
-	if (this.overgrown() && currentTime - this.lastUpdateMillis > 200){
+	if (this.overgrown() || currentTime - this.lastUpdateMillis > 200){
 		this.clear();
 		this.display.refresh();
 	}
@@ -49,7 +49,7 @@ TextBox.prototype.checkFaint = function(){
 
 TextBox.prototype.addText = function(text){
 	var currentTime = new Date().getTime();
-	if (this.cury >= this.height - 1 && currentTime - this.lastUpdateMillis > 200){
+	if (this.cury >= this.height - 1 || currentTime - this.lastUpdateMillis > 200){
 		this.clear();
 		this.display.refresh();
 	}
