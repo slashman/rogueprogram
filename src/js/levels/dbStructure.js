@@ -4,7 +4,7 @@ module.exports = {
 "    ╔════════════╗                                  ╔═════════════╗             ",
 "    ║   MOVIES   ║                                  ║   CLIENTS   ║             ",
 "    ╠════════════╣                                  ╠═════════════╣             ",
-"    ║            ║######                      ######║             ║             ",
+"    ║            ║######                      ######║          %  ║             ",
 "    ║ $Id         ────┐#                      #┌────   $Id        ║             ",
 "    ║            ║####│#                      #│####║             ║             ",
 "    ║  Name      ║   #│#  ╔══════════════╗    #│#   ║   Name      ║             ",
@@ -29,8 +29,9 @@ module.exports = {
 		}
 	],
 	hints: [
+		"To pick up items, use the comma key while standing on them",
 		"This program controls the organization of data across the system",
- 		"Once secretary Andropov commanded the nuclear strikes to start, long distance communications were shut down."
+ 		"Once secretary Andropov commanded the nuclear strikes to start, long distance communications were shut down.",
 	],
 	welcomeMessage: "You are now inspecting the database structure.",
 	items: [
