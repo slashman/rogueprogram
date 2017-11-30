@@ -18,6 +18,7 @@ const LEVEL_DEFS = {
 	rentMovie: require('./levels/rentMovie'),
 	rogue: require('./levels/rogue'),
 	wordProcessor: require('./levels/wordProcessor'),
+	castle: require('./levels/castle'),
 } 
 
 module.exports = {

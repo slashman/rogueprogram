@@ -3,7 +3,7 @@ var Geo = require('./Geo');
 const Item = require('./Item.class');
 const Items = require('./Items.enum');
 const color = require('./constants').color;
-
+var Tiles = require('./Tiles.enum');
 
 function Being(game, level, race){
 	this.game = game;
@@ -90,7 +90,12 @@ Being.prototype = {
 		if (this.hp <= 0){
 			this.game.display.message(`The ${this.name} dies!`);
 			this.game.world.level.removeBeing(this);
-			this.game.world.level.addItem(this.x, this.y, new Item(Items[`${this.name}_CHARACTER`]));
+			if (this.hint === 'processman'){
+				this.game.display.message(`An invisible choir sings, and you are bathed in light!`);
+				this.level.addExit(this.x, this.y, 'castle', Tiles.PORTAL);
+			} else {
+				this.game.world.level.addItem(this.x, this.y, new Item(Items[`${this.name}_CHARACTER`]));
+			}
 		}
 	}
 }
